@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const persona = {
+            nombre: "sebas",
+            apellido: "gomez",
+            edad: 17,
+            direccion: {
+        calle: 23,
+        carrera: 16,
+        namber:44
+            }
+        }
+
+        const persona2 = { ...persona }
+        persona2.edad = 19
+
+        console.table(persona)
+        console.table(persona2)
+    </script>
+</body>
+
+</html>

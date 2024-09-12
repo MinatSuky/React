@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const persona = {
+             nombre:"sebas",
+             edad:19,
+             clave:"villaa"
+              
+        }
+     
+
+        // const userContext = ({nombre, edad, clave}) => {
+               
+        //     console.log(nombre, edad, clave)    ------------JAVASCRIPT
+                     
+        // }
+        // userContext(persona)
+
+
+
+         const userContext = ({nombre, edad, clave}) => ({
+               
+                   nombreClve:clave,
+                   anios:edad                            //------------REACT
+                            
+                })
+              const avergen = userContext(persona)
+              console.log(avergen)
+
+
+
+
+              const userContext2 = ({nombre, edad, clave}) => ({
+               
+             
+                nombreClve:clave,
+               anios:edad,                  //------------REACT, desestructuracion de avergen
+                                
+
+                        
+            })
+          const {nombreClve,anios} = userContext2(persona);
+          console.log(nombreClve,anios);
+
+
+          const userContext3 = ({nombre, edad, clave}) => ({
+            
+               nombreClve2:clave,
+              anios2:edad,                  //------------REACT, desestructuracion de un objeto dentro de otro
+              cordenadas:{
+                lat: 14.2650,
+                log:-56.2541,
+              }
+                     
+           })
+         const {nombreClve2,anios2,cordenadas:{lat, log}} = userContext3(persona);
+         console.log(nombreClve2,anios2);
+         console.log(lat, log);
+         
+    </script>
+</body>
+
+</html>
